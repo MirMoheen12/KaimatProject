@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="cc223750176c454fbac54cb94b010d6b" Name="Diagram1">
+        <EntityTypeShape EntityType="FIADATABASEModel.C__EFMigrationsHistory" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.Address" Width="1.5" PointX="12.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.AspNetRoleClaim" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.AspNetRole" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.AspNetUser" Width="1.5" PointX="3" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.AspNetUserToken" Width="1.5" PointX="5.25" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.BankAccount" Width="1.5" PointX="9.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.BaseLog" Width="1.5" PointX="11.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.CBRN" Width="1.5" PointX="13.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.Chemical" Width="1.5" PointX="0.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.CityList" Width="1.5" PointX="19.5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.CommonLink" Width="1.5" PointX="14.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.Communication" Width="1.5" PointX="15.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.Component" Width="1.5" PointX="2.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.ContactNumber" Width="1.5" PointX="4.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.CountryList" Width="1.5" PointX="12.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.DatabaseList" Width="1.5" PointX="16.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.Detonator" Width="1.5" PointX="6.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.DistrictList" Width="1.5" PointX="17.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.Equipment" Width="1.5" PointX="15.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.Evidence" Width="1.5" PointX="17.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.Explosive" Width="1.5" PointX="17.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.Firearm" Width="1.5" PointX="8.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.Group" Width="1.5" PointX="10.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.Incident" Width="1.5" PointX="19.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.InitiationSystem" Width="1.5" PointX="19.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.IpLog" Width="1.5" PointX="5.25" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.MediaFile" Width="1.5" PointX="12.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.Ordinance" Width="1.5" PointX="21.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.Ordnance" Width="1.5" PointX="21.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.Person" Width="1.5" PointX="7.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.PersonAddress" Width="1.5" PointX="10" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.PersonPassportNo" Width="1.5" PointX="10" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.Pipe" Width="1.5" PointX="14.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.PoliceStation" Width="1.5" PointX="21.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.PowerSource" Width="1.5" PointX="21.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.Property" Width="1.5" PointX="16.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.ProvinceList" Width="1.5" PointX="15" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.ReportingAgency" Width="1.5" PointX="23.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.SocialMedia" Width="1.5" PointX="10" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.sysdiagram" Width="1.5" PointX="2.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.Vehicle" Width="1.5" PointX="23.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FIADATABASEModel.tblIncident" Width="1.5" PointX="23.75" PointY="9.75" IsExpanded="true" />
+        <AssociationConnector Association="FIADATABASEModel.FK_AspNetRoleClaims_AspNetRoles_RoleId" ManuallyRouted="false" />
+        <AssociationConnector Association="FIADATABASEModel.FK_AspNetUserClaims_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="FIADATABASEModel.FK_AspNetUserLogins_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="FIADATABASEModel.FK_AspNetUserTokens_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="FIADATABASEModel.FK_IpLogs_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="FIADATABASEModel.FK_CityList_DistrictList_DistrictListstrURN" ManuallyRouted="false" />
+        <AssociationConnector Association="FIADATABASEModel.FK_PoliceStation_CityList_CityListstrURN" ManuallyRouted="false" />
+        <AssociationConnector Association="FIADATABASEModel.FK_ProvinceList_CountryList_CountryListstrURN" ManuallyRouted="false" />
+        <AssociationConnector Association="FIADATABASEModel.FK_DistrictList_ProvinceList_ProvinceListstrURN" ManuallyRouted="false" />
+        <AssociationConnector Association="FIADATABASEModel.FK_PersonAddress_Person_PersonstrURN" ManuallyRouted="false" />
+        <AssociationConnector Association="FIADATABASEModel.FK_PersonPassportNo_Person_PersonstrURN" ManuallyRouted="false" />
+        <AssociationConnector Association="FIADATABASEModel.FK_SocialMedia_Person_PersonstrURN" ManuallyRouted="false" />
+        <AssociationConnector Association="FIADATABASEModel.AspNetUserRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,1149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FIADATABASEModelStoreContainer" CdmEntityContainer="FIADATABASEEntities">
+    <EntitySetMapping Name="C__EFMigrationsHistory">
+      <EntityTypeMapping TypeName="FIADATABASEModel.C__EFMigrationsHistory">
+        <MappingFragment StoreEntitySet="__EFMigrationsHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Addresses">
+      <EntityTypeMapping TypeName="FIADATABASEModel.Address">
+        <MappingFragment StoreEntitySet="Address">
+          <ScalarProperty Name="strURN" ColumnName="strURN" />
+          <ScalarProperty Name="AddressDescription" ColumnName="AddressDescription" />
+          <ScalarProperty Name="AddressName" ColumnName="AddressName" />
+          <ScalarProperty Name="AddressType" ColumnName="AddressType" />
+          <ScalarProperty Name="HouseNumber" ColumnName="HouseNumber" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="District" ColumnName="District" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="StreetNumber" ColumnName="StreetNumber" />
+          <ScalarProperty Name="Mohallah" ColumnName="Mohallah" />
+          <ScalarProperty Name="Village" ColumnName="Village" />
+          <ScalarProperty Name="Town" ColumnName="Town" />
+          <ScalarProperty Name="PostOffice" ColumnName="PostOffice" />
+          <ScalarProperty Name="TehsilTaluka" ColumnName="TehsilTaluka" />
+          <ScalarProperty Name="PostalZip" ColumnName="PostalZip" />
+          <ScalarProperty Name="CommonwealthTerritory" ColumnName="CommonwealthTerritory" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Other1" ColumnName="Other1" />
+          <ScalarProperty Name="Other2" ColumnName="Other2" />
+          <ScalarProperty Name="memRemarks" ColumnName="memRemarks" />
+          <ScalarProperty Name="dteSent" ColumnName="dteSent" />
+          <ScalarProperty Name="intID" ColumnName="intID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="textSearch" ColumnName="textSearch" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetRoleClaims">
+      <EntityTypeMapping TypeName="FIADATABASEModel.AspNetRoleClaim">
+        <MappingFragment StoreEntitySet="AspNetRoleClaims">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetRoles">
+      <EntityTypeMapping TypeName="FIADATABASEModel.AspNetRole">
+        <MappingFragment StoreEntitySet="AspNetRoles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NormalizedName" ColumnName="NormalizedName" />
+          <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserClaims">
+      <EntityTypeMapping TypeName="FIADATABASEModel.AspNetUserClaim">
+        <MappingFragment StoreEntitySet="AspNetUserClaims">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserLogins">
+      <EntityTypeMapping TypeName="FIADATABASEModel.AspNetUserLogin">
+        <MappingFragment StoreEntitySet="AspNetUserLogins">
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+          <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+          <ScalarProperty Name="ProviderDisplayName" ColumnName="ProviderDisplayName" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUsers">
+      <EntityTypeMapping TypeName="FIADATABASEModel.AspNetUser">
+        <MappingFragment StoreEntitySet="AspNetUsers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Discriminator" ColumnName="Discriminator" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IsAllow" ColumnName="IsAllow" />
+          <ScalarProperty Name="Device_token" ColumnName="Device_token" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="NormalizedUserName" ColumnName="NormalizedUserName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="NormalizedEmail" ColumnName="NormalizedEmail" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="ConcurrencyStamp" ColumnName="ConcurrencyStamp" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="LockoutEnd" ColumnName="LockoutEnd" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="UserRole" ColumnName="UserRole" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserTokens">
+      <EntityTypeMapping TypeName="FIADATABASEModel.AspNetUserToken">
+        <MappingFragment StoreEntitySet="AspNetUserTokens">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BankAccounts">
+      <EntityTypeMapping TypeName="FIADATABASEModel.BankAccount">
+        <MappingFragment StoreEntitySet="BankAccount">
+          <ScalarProperty Name="strURN" ColumnName="strURN" />
+          <ScalarProperty Name="AccountNo" ColumnName="AccountNo" />
+          <ScalarProperty Name="BranchCode" ColumnName="BranchCode" />
+          <ScalarProperty Name="Bank" ColumnName="Bank" />
+          <ScalarProperty Name="Branch" ColumnName="Branch" />
+          <ScalarProperty Name="MemRemarks" ColumnName="MemRemarks" />
+          <ScalarProperty Name="intID" ColumnName="intID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="textSearch" ColumnName="textSearch" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BaseLogs">
+      <EntityTypeMapping TypeName="FIADATABASEModel.BaseLog">
+        <MappingFragment StoreEntitySet="BaseLogs">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="strURN" ColumnName="strURN" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="textSearch" ColumnName="textSearch" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CBRNs">
+      <EntityTypeMapping TypeName="FIADATABASEModel.CBRN">
+        <MappingFragment StoreEntitySet="CBRN">
+          <ScalarProperty Name="strURN" ColumnName="strURN" />
+          <ScalarProperty Name="strCountryOrigin" ColumnName="strCountryOrigin" />
+          <ScalarProperty Name="strType" ColumnName="strType" />
+          <ScalarProperty Name="strQuantityMeasurement" ColumnName="strQuantityMeasurement" />
+          <ScalarProperty Name="strMethodDelivery" ColumnName="strMethodDelivery" />
+          <ScalarProperty Name="strManufacturer" ColumnName="strManufacturer" />
+          <ScalarProperty Name="strCountryRecovered" ColumnName="strCountryRecovered" />
+          <ScalarProperty Name="strUNNumber" ColumnName="strUNNumber" />
+          <ScalarProperty Name="strSpecialPrecautions" ColumnName="strSpecialPrecautions" />
+          <ScalarProperty Name="strOther" ColumnName="strOther" />
+          <ScalarProperty Name="strSecurityRating" ColumnName="strSecurityRating" />
+          <ScalarProperty Name="intID" ColumnName="intID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="textSearch" ColumnName="textSearch" />
+          <ScalarProperty Name="strHazard" ColumnName="strHazard" />
+          <ScalarProperty Name="strName" ColumnName="strName" />
+          <ScalarProperty Name="strPrimaryMediaImageUrn" ColumnName="strPrimaryMediaImageUrn" />
+          <ScalarProperty Name="intQuantity" ColumnName="intQuantity" />
+          <ScalarProperty Name="memRemarks" ColumnName="memRemarks" />
+          <ScalarProperty Name="strCategory" ColumnName="strCategory" />
+          <ScalarProperty Name="strDescription" ColumnName="strDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Chemicals">
+      <EntityTypeMapping TypeName="FIADATABASEModel.Chemical">
+        <MappingFragment StoreEntitySet="Chemical">
+          <ScalarProperty Name="strURN" ColumnName="strURN" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="OtherNames" ColumnName="OtherNames" />
+          <ScalarProperty Name="CountryRecovered" ColumnName="CountryRecovered" />
+          <ScalarProperty Name="CountryOrigin" ColumnName="CountryOrigin" />
+          <ScalarProperty Name="CasNo" ColumnName="CasNo" />
+          <ScalarProperty Name="RtecsNo" ColumnName="RtecsNo" />
+          <ScalarProperty Name="UnNo" ColumnName="UnNo" />
+          <ScalarProperty Name="EcNo" ColumnName="EcNo" />
+          <ScalarProperty Name="ChemicalFormula" ColumnName="ChemicalFormula" />
+          <ScalarProperty Name="PhysicalAppearance" ColumnName="PhysicalAppearance" />
+          <ScalarProperty Name="ChemicalDangers" ColumnName="ChemicalDangers" />
+          <ScalarProperty Name="OccupationalExposureLimitsTLV" ColumnName="OccupationalExposureLimitsTLV" />
+          <ScalarProperty Name="OccupationalExposureLimitsMAK" ColumnName="OccupationalExposureLimitsMAK" />
+          <ScalarProperty Name="RoutesOfExposure" ColumnName="RoutesOfExposure" />
+          <ScalarProperty Name="SpillageDisposal" ColumnName="SpillageDisposal" />
+          <ScalarProperty Name="Packaging" ColumnName="Packaging" />
+          <ScalarProperty Name="Labelling" ColumnName="Labelling" />
+          <ScalarProperty Name="SafeStorage" ColumnName="SafeStorage" />
+          <ScalarProperty Name="TransportEmergencyCard" ColumnName="TransportEmergencyCard" />
+          <ScalarProperty Name="NfpaCode" ColumnName="NfpaCode" />
+          <ScalarProperty Name="UnHazardClass" ColumnName="UnHazardClass" />
+          <ScalarProperty Name="UnSubsidiaryRisks" ColumnName="UnSubsidiaryRisks" />
+          <ScalarProperty Name="UnPackGroup" ColumnName="UnPackGroup" />
+          <ScalarProperty Name="HazardExposure" ColumnName="HazardExposure" />
+          <ScalarProperty Name="BoilingPointLow" ColumnName="BoilingPointLow" />
+          <ScalarProperty Name="BoilingPointHigh" ColumnName="BoilingPointHigh" />
+          <ScalarProperty Name="MeltingPointHighLow" ColumnName="MeltingPointHighLow" />
+          <ScalarProperty Name="MeltingPointHigh" ColumnName="MeltingPointHigh" />
+          <ScalarProperty Name="DensityLow" ColumnName="DensityLow" />
+          <ScalarProperty Name="DensityHigh" ColumnName="DensityHigh" />
+          <ScalarProperty Name="RelativeDensityLow" ColumnName="RelativeDensityLow" />
+          <ScalarProperty Name="RelativeDensityHigh" ColumnName="RelativeDensityHigh" />
+          <ScalarProperty Name="WaterSolubility" ColumnName="WaterSolubility" />
+          <ScalarProperty Name="VapourPressureLow" ColumnName="VapourPressureLow" />
+          <ScalarProperty Name="VapourPressureHigh" ColumnName="VapourPressureHigh" />
+          <ScalarProperty Name="RelativeVapourDensityLow" ColumnName="RelativeVapourDensityLow" />
+          <ScalarProperty Name="RelativeVapourDensityHigh" ColumnName="RelativeVapourDensityHigh" />
+          <ScalarProperty Name="FlashPointLow" ColumnName="FlashPointLow" />
+          <ScalarProperty Name="FlashPointHigh" ColumnName="FlashPointHigh" />
+          <ScalarProperty Name="AutoIgnitionTempLow" ColumnName="AutoIgnitionTempLow" />
+          <ScalarProperty Name="AutoIgnitionTempHigh" ColumnName="AutoIgnitionTempHigh" />
+          <ScalarProperty Name="ExplosiveLimits" ColumnName="ExplosiveLimits" />
+          <ScalarProperty Name="OctanolWaterPartitionLow" ColumnName="OctanolWaterPartitionLow" />
+          <ScalarProperty Name="OctanolWaterPartitionHigh" ColumnName="OctanolWaterPartitionHigh" />
+          <ScalarProperty Name="InhalationRisk" ColumnName="InhalationRisk" />
+          <ScalarProperty Name="EnvironmentalData" ColumnName="EnvironmentalData" />
+          <ScalarProperty Name="memRemarks" ColumnName="memRemarks" />
+          <ScalarProperty Name="dteSent" ColumnName="dteSent" />
+          <ScalarProperty Name="intID" ColumnName="intID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="textSearch" ColumnName="textSearch" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CityLists">
+      <EntityTypeMapping TypeName="FIADATABASEModel.CityList">
+        <MappingFragment StoreEntitySet="CityList">
+          <ScalarProperty Name="strURN" ColumnName="strURN" />
+          <ScalarProperty Name="strCityCode" ColumnName="strCityCode" />
+          <ScalarProperty Name="strCity" ColumnName="strCity" />
+          <ScalarProperty Name="DistrictListstrURN" ColumnName="DistrictListstrURN" />
+          <ScalarProperty Name="intID" ColumnName="intID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="textSearch" ColumnName="textSearch" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CommonLinks">
+      <EntityTypeMapping TypeName="FIADATABASEModel.CommonLink">
+        <MappingFragment StoreEntitySet="CommonLinks">
+          <ScalarProperty Name="strURN" ColumnName="strURN" />
+          <ScalarProperty Name="strURNDest" ColumnName="strURNDest" />
+          <ScalarProperty Name="strURNSource" ColumnName="strURNSource" />
+          <ScalarProperty Name="strLink" ColumnName="strLink" />
+          <ScalarProperty Name="intID" ColumnName="intID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="InformationEvaluation" ColumnName="InformationEvaluation" />
+          <ScalarProperty Name="SourceEvaluation" ColumnName="SourceEvaluation" />
+          <ScalarProperty Name="intDbIdDest" ColumnName="intDbIdDest" />
+          <ScalarProperty Name="intDbIdSource" ColumnName="intDbIdSource" />
+          <ScalarProperty Name="optBiDirectional" ColumnName="optBiDirectional" />
+          <ScalarProperty Name="textSearch" ColumnName="textSearch" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Communications">
+      <EntityTypeMapping TypeName="FIADATABASEModel.Communication">
+        <MappingFragment StoreEntitySet="Communications">
+          <ScalarProperty Name="strURN" ColumnName="strURN" />
+          <ScalarProperty Name="CommType" ColumnName="CommType" />
+          <ScalarProperty Name="CommDescription" ColumnName="CommDescription" />
+          <ScalarProperty Name="CommName" ColumnName="CommName" />
+          <ScalarProperty Name="Other" ColumnName="Other" />
+          <ScalarProperty Name="WebValue" ColumnName="WebValue" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="ServiceProvider" ColumnName="ServiceProvider" />
+          <ScalarProperty Name="CountryOrigin" ColumnName="CountryOrigin" />
+          <ScalarProperty Name="memRemarks" ColumnName="memRemarks" />
+          <ScalarProperty Name="dteSent" ColumnName="dteSent" />
+          <ScalarProperty Name="intID" ColumnName="intID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="textSearch" ColumnName="textSearch" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Components">
+      <EntityTypeMapping TypeName="FIADATABASEModel.Component">
+        <MappingFragment StoreEntitySet="Components">
+          <ScalarProperty Name="strURN" ColumnName="strURN" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="CountryOrigin" ColumnName="CountryOrigin" />
+          <ScalarProperty Name="Material" ColumnName="Material" />
+          <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="MethodDelivery" ColumnName="MethodDelivery" />
+          <ScalarProperty Name="QuantityWeight" ColumnName="QuantityWeight" />
+          <ScalarProperty Name="QuantityNo" ColumnName="QuantityNo" />
+          <ScalarProperty Name="CountryRecovered" ColumnName="CountryRecovered" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Diameter" ColumnName="Diameter" />
+          <ScalarProperty Name="Colour" ColumnName="Colour" />
+          <ScalarProperty Name="Markings" ColumnName="Markings" />
+          <ScalarProperty Name="memRemarks" ColumnName="memRemarks" />
+          <ScalarProperty Name="dteSent" ColumnName="dteSent" />
+          <ScalarProperty Name="intID" ColumnName="intID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="textSearch" ColumnName="textSearch" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContactNumbers">
+      <EntityTypeMapping TypeName="FIADATABASEModel.ContactNumber">
+        <MappingFragment StoreEntitySet="ContactNumber">
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CountryLists">
+      <EntityTypeMapping TypeName="FIADATABASEModel.CountryList">
+        <MappingFragment StoreEntitySet="CountryList">
+          <ScalarProperty Name="strURN" ColumnName="strURN" />
+          <ScalarProperty Name="strCountryCode" ColumnName="strCountryCode" />
+          <ScalarProperty Name="strCountry" ColumnName="strCountry" />
+          <ScalarProperty Name="intID" ColumnName="intID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="textSearch" ColumnName="textSearch" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DatabaseLists">
+      <EntityTypeMapping TypeName="FIADATABASEModel.DatabaseList">
+        <MappingFragment StoreEntitySet="DatabaseList">
+          <ScalarProperty Name="strURN" ColumnName="strURN" />
+          <ScalarProperty Name="intType" ColumnName="intType" />
+          <ScalarProperty Name="strTitle" ColumnName="strTitle" />
+          <ScalarProperty Name="strTable" ColumnName="strTable" />
+          <ScalarProperty Name="strTranslation" ColumnName="strTranslation" />
+          <ScalarProperty Name="optTransmit" ColumnName="optTransmit" />
+          <ScalarProperty Name="optPhysicalDatabase" ColumnName="optPhysicalDatabase" />
+          <ScalarProperty Name="dteSent" ColumnName="dteSent" />
+          <ScalarProperty Name="intID" ColumnName="intID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="textSearch" ColumnName="textSearch" />
+          <ScalarProperty Name="strControllerName" ColumnName="strControllerName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Detonators">
+      <EntityTypeMapping TypeName="FIADATABASEModel.Detonator">
+        <MappingFragment StoreEntitySet="Detonator">
+          <ScalarProperty Name="strURN" ColumnName="strURN" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Other" ColumnName="Other" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="CountryOfRecovery" ColumnName="CountryOfRecovery" />
+          <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+          <ScalarProperty Name="CountryOfOrigin" ColumnName="CountryOfOrigin" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="CapMaterial" ColumnName="CapMaterial" />
+          <ScalarProperty Name="CapColor" ColumnName="CapColor" />
+          <ScalarProperty Name="CapLength" ColumnName="CapLength" />
+          <ScalarProperty Name="CapDiameter" ColumnName="CapDiameter" />
+          <ScalarProperty Name="Crimp" ColumnName="Crimp" />
+          <ScalarProperty Name="CrimpType" ColumnName="CrimpType" />
+          <ScalarProperty Name="PlugColor" ColumnName="PlugColor" />
+          <ScalarProperty Name="PlugMaterial" ColumnName="PlugMaterial" />
+          <ScalarProperty Name="WireColor" ColumnName="WireColor" />
+          <ScalarProperty Name="WireColor2" ColumnName="WireColor2" />
+          <ScalarProperty Name="WireDiameter" ColumnName="WireDiameter" />
+          <ScalarProperty Name="WireMaterial" ColumnName="WireMaterial" />
+          <ScalarProperty Name="CaseTubeMaterial" ColumnName="CaseTubeMaterial" />
+          <ScalarProperty Name="CaseTubeColor" ColumnName="CaseTubeColor" />
+          <ScalarProperty Name="CaseTubeLength" ColumnName="CaseTubeLength" />
+          <ScalarProperty Name="CaseTubeDiameter" ColumnName="CaseTubeDiameter" />
+          <ScalarProperty Name="BaseShape" ColumnName="BaseShape" />
+          <ScalarProperty Name="BaseMarking" ColumnName="BaseMarking" />
+          <ScalarProperty Name="BatchCode" ColumnName="BatchCode" />
+          <ScalarProperty Name="MemRemarks" ColumnName="MemRemarks" />
+          <ScalarProperty Name="StrDateEstablished" ColumnName="StrDateEstablished" />
+          <ScalarProperty Name="intID" ColumnName="intID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="textSearch" ColumnName="textSearch" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DistrictLists">
+      <EntityTypeMapping TypeName="FIADATABASEModel.DistrictList">
+        <MappingFragment StoreEntitySet="DistrictList">
+          <ScalarProperty Name="strURN" ColumnName="strURN" />
+          <ScalarProperty Name="strDistrict" ColumnName="strDistrict" />
+          <ScalarProperty Name="ProvinceListstrURN" ColumnName="ProvinceListstrURN" />
+          <ScalarProperty Name="intID" ColumnName="intID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="textSearch" ColumnName="textSearch" />
+          <ScalarProperty Name="ProvinceListintID" ColumnName="ProvinceListintID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Equipments">
+      <EntityTypeMapping TypeName="FIADATABASEModel.Equipment">
+        <MappingFragment StoreEntitySet="Equipment">
+          <ScalarProperty Name="strURN" ColumnName="strURN" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+          <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+          <ScalarProperty Name="memRemarks" ColumnName="memRemarks" />
+          <ScalarProperty Name="dteSent" ColumnName="dteSent" />
+          <ScalarProperty Name="intID" ColumnName="intID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="textSearch" ColumnName="textSearch" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Evidences">
+      <EntityTypeMapping TypeName="FIADATABASEModel.Evidence">
+        <MappingFragment StoreEntitySet="Evidence">
+          <ScalarProperty Name="strURN" ColumnName="strURN" />
+          <ScalarProperty Name="Item" ColumnName="Item" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="CollectedBy" ColumnName="CollectedBy" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="memRemarks" ColumnName="memRemarks" />
+          <ScalarProperty Name="dteSent" ColumnName="dteSent" />
+          <ScalarProperty Name="intID" ColumnName="intID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="textSearch" ColumnName="textSearch" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Explosives">
+      <EntityTypeMapping TypeName="FIADATABASEModel.Explosive">
+        <MappingFragment StoreEntitySet="Explosive">
+          <ScalarProperty Name="strURN" ColumnName="strURN" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="MeasurementUnit" ColumnName="MeasurementUnit" />
+          <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+          <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+          <ScalarProperty Name="CountryOrigin" ColumnName="CountryOrigin" />
+          <ScalarProperty Name="CountryRecovered" ColumnName="CountryRecovered" />
+          <ScalarProperty Name="Markings" ColumnName="Markings" />
+          <ScalarProperty Name="Colour" ColumnName="Colour" />
+          <ScalarProperty Name="Packaging" ColumnName="Packaging" />
+          <ScalarProperty Name="ExplosiveLength" ColumnName="ExplosiveLength" />
+          <ScalarProperty Name="ExplosiveWidth" ColumnName="ExplosiveWidth" />
+          <ScalarProperty Name="ExplosiveHeight" ColumnName="ExplosiveHeight" />
+          <ScalarProperty Name="ExplosiveWeight" ColumnName="ExplosiveWeight" />
+          <ScalarProperty Name="ExplosiveDiameter" ColumnName="ExplosiveDiameter" />
+          <ScalarProperty Name="memRemarks" ColumnName="memRemarks" />
+          <ScalarProperty Name="dteSent" ColumnName="dteSent" />
+          <ScalarProperty Name="intID" ColumnName="intID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="textSearch" ColumnName="textSearch" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Firearms">
+      <EntityTypeMapping TypeName="FIADATABASEModel.Firearm">
+        <MappingFragment StoreEntitySet="Firearms">
+          <ScalarProperty Name="strURN" ColumnName="strURN" />
+          <ScalarProperty Name="Make" ColumnName="Make" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+          <ScalarProperty Name="CountryOrigin" ColumnName="CountryOrigin" />
+          <ScalarProperty Name="Impoter" ColumnName="Impoter" />
+          <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+          <ScalarProperty Name="SerialErased" ColumnName="SerialErased" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="Calibre" ColumnName="Calibre" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="CountryRecovered" ColumnName="CountryRecovered" />
+          <ScalarProperty Name="BarrelLength" ColumnName="BarrelLength" />
+          <ScalarProperty Name="RoundsHeld" ColumnName="RoundsHeld" />
+          <ScalarProperty Name="Deactivated" ColumnName="Deactivated" />
+          <ScalarProperty Name="Reactivated" ColumnName="Reactivated" />
+          <ScalarProperty Name="FactoryMade" ColumnName="FactoryMade" />
+          <ScalarProperty Name="Imitation" ColumnName="Imitation" />
+          <ScalarProperty Name="OwnersCertificateNumber" ColumnName="OwnersCertificateNumber" />
+          <ScalarProperty Name="memRemarks" ColumnName="memRemarks" />
+          <ScalarProperty Name="dteSent" ColumnName="dteSent" />
+          <ScalarProperty Name="intID" ColumnName="intID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="textSearch" ColumnName="textSearch" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Groups">
+      <EntityTypeMapping TypeName="FIADATABASEModel.Group">
+        <MappingFragment StoreEntitySet="Group">
+          <ScalarProperty Name="strURN" ColumnName="strURN" />
+          <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+          <ScalarProperty Name="SubCategory" ColumnName="SubCategory" />
+          <ScalarProperty Name="CountryOrigin" ColumnName="CountryOrigin" />
+          <ScalarProperty Name="GroupTo" ColumnName="GroupTo" />
+          <ScalarProperty Name="HeadName" ColumnName="HeadName" />
+          <ScalarProperty Name="MemGoals" ColumnName="MemGoals" />
+          <ScalarProperty Name="strDeclaredByWhom" ColumnName="strDeclaredByWhom" />
+          <ScalarProperty Name="Strength" ColumnName="Strength" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="District" ColumnName="District" />
+          <ScalarProperty Name="PostalZip" ColumnName="PostalZip" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="MemRemarks" ColumnName="MemRemarks" />
+          <ScalarProperty Name="DateEstablished" ColumnName="DateEstablished" />
+          <ScalarProperty Name="intID" ColumnName="intID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="textSearch" ColumnName="textSearch" />
+          <ScalarProperty Name="GroupReportingAgency" ColumnName="GroupReportingAgency" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Incidents">
+      <EntityTypeMapping TypeName="FIADATABASEModel.Incident">
+        <MappingFragment StoreEntitySet="Incident">
+          <ScalarProperty Name="strURN" ColumnName="strURN" />
+          <ScalarProperty Name="strOperationName" ColumnName="strOperationName" />
+          <ScalarProperty Name="FirNo" ColumnName="FirNo" />
+          <ScalarProperty Name="RegYear" ColumnName="RegYear" />
+          <ScalarProperty Name="US" ColumnName="US" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="District" ColumnName="District" />
+          <ScalarProperty Name="PostalZip" ColumnName="PostalZip" />
+          <ScalarProperty Name="PoliceStation" ColumnName="PoliceStation" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="IncidentDate" ColumnName="IncidentDate" />
+          <ScalarProperty Name="IncidentTime" ColumnName="IncidentTime" />
+          <ScalarProperty Name="IncidentTimeEnd" ColumnName="IncidentTimeEnd" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="NumberKilled" ColumnName="NumberKilled" />
+          <ScalarProperty Name="NumberInjured" ColumnName="NumberInjured" />
+          <ScalarProperty Name="InjuredName" ColumnName="InjuredName" />
+          <ScalarProperty Name="CasualtiesNames" ColumnName="CasualtiesNames" />
+          <ScalarProperty Name="SuicideBomb" ColumnName="SuicideBomb" />
+          <ScalarProperty Name="CTWRemarks" ColumnName="CTWRemarks" />
+          <ScalarProperty Name="Target" ColumnName="Target" />
+          <ScalarProperty Name="Motive" ColumnName="Motive" />
+          <ScalarProperty Name="Recoveries" ColumnName="Recoveries" />
+          <ScalarProperty Name="CrimeSceneRecoveries" ColumnName="CrimeSceneRecoveries" />
+          <ScalarProperty Name="CaseStatus" ColumnName="CaseStatus" />
+          <ScalarProperty Name="strCaseProgress" ColumnName="strCaseProgress" />
+          <ScalarProperty Name="Weapon" ColumnName="Weapon" />
+          <ScalarProperty Name="ModusofOperandi" ColumnName="ModusofOperandi" />
+          <ScalarProperty Name="dteSent" ColumnName="dteSent" />
+          <ScalarProperty Name="intID" ColumnName="intID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="textSearch" ColumnName="textSearch" />
+          <ScalarProperty Name="NumberArrested" ColumnName="NumberArrested" />
+          <ScalarProperty Name="PreIncidentThread" ColumnName="PreIncidentThread" />
+          <ScalarProperty Name="Reportedby" ColumnName="Reportedby" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InitiationSystems">
+      <EntityTypeMapping TypeName="FIADATABASEModel.InitiationSystem">
+        <MappingFragment StoreEntitySet="InitiationSystem">
+          <ScalarProperty Name="strURN" ColumnName="strURN" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Electric" ColumnName="Electric" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Other" ColumnName="Other" />
+          <ScalarProperty Name="Make" ColumnName="Make" />
+          <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+          <ScalarProperty Name="CountryOrigin" ColumnName="CountryOrigin" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Diameter" ColumnName="Diameter" />
+          <ScalarProperty Name="Voltage" ColumnName="Voltage" />
+          <ScalarProperty Name="Markings" ColumnName="Markings" />
+          <ScalarProperty Name="BatchCode" ColumnName="BatchCode" />
+          <ScalarProperty Name="SerialNumbers" ColumnName="SerialNumbers" />
+          <ScalarProperty Name="Colour" ColumnName="Colour" />
+          <ScalarProperty Name="NumberRecovered" ColumnName="NumberRecovered" />
+          <ScalarProperty Name="CountryRecovered" ColumnName="CountryRecovered" />
+          <ScalarProperty Name="memRemarks" ColumnName="memRemarks" />
+          <ScalarProperty Name="dteSent" ColumnName="dteSent" />
+          <ScalarProperty Name="intID" ColumnName="intID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="textSearch" ColumnName="textSearch" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IpLogs">
+      <EntityTypeMapping TypeName="FIADATABASEModel.IpLog">
+        <MappingFragment StoreEntitySet="IpLogs">
+          <ScalarProperty Name="strURN" ColumnName="strURN" />
+          <ScalarProperty Name="IP" ColumnName="IP" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="intID" ColumnName="intID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="textSearch" ColumnName="textSearch" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MediaFiles">
+      <EntityTypeMapping TypeName="FIADATABASEModel.MediaFile">
+        <MappingFragment StoreEntitySet="MediaFile">
+          <ScalarProperty Name="strURN" ColumnName="strURN" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ContentType" ColumnName="ContentType" />
+          <ScalarProperty Name="ContentLength" ColumnName="ContentLength" />
+          <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+          <ScalarProperty Name="intID" ColumnName="intID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="textSearch" ColumnName="textSearch" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ordinances">
+      <EntityTypeMapping TypeName="FIADATABASEModel.Ordinance">
+        <MappingFragment StoreEntitySet="Ordinance">
+          <ScalarProperty Name="strURN" ColumnName="strURN" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Other" ColumnName="Other" />
+          <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+          <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+          <ScalarProperty Name="CountryRecovered" ColumnName="CountryRecovered" />
+          <ScalarProperty Name="CountryOrigin" ColumnName="CountryOrigin" />
+          <ScalarProperty Name="ExplosiveWeight" ColumnName="ExplosiveWeight" />
+          <ScalarProperty Name="memMarkings" ColumnName="memMarkings" />
+          <ScalarProperty Name="BatchCode" ColumnName="BatchCode" />
+          <ScalarProperty Name="SerialNumbers" ColumnName="SerialNumbers" />
+          <ScalarProperty Name="Colour" ColumnName="Colour" />
+          <ScalarProperty Name="Calibre" ColumnName="Calibre" />
+          <ScalarProperty Name="HeadStamp" ColumnName="HeadStamp" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Depth" ColumnName="Depth" />
+          <ScalarProperty Name="Diameter" ColumnName="Diameter" />
+          <ScalarProperty Name="NumberRecovered" ColumnName="NumberRecovered" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="intID" ColumnName="intID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="textSearch" ColumnName="textSearch" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ordnances">
+      <EntityTypeMapping TypeName="FIADATABASEModel.Ordnance">
+        <MappingFragment StoreEntitySet="Ordnance">
+          <ScalarProperty Name="strURN" ColumnName="strURN" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Other" ColumnName="Other" />
+          <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+          <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+          <ScalarProperty Name="CountryRecovered" ColumnName="CountryRecovered" />
+          <ScalarProperty Name="CountryOrigin" ColumnName="CountryOrigin" />
+          <ScalarProperty Name="ExplosiveWeight" ColumnName="ExplosiveWeight" />
+          <ScalarProperty Name="memMarkings" ColumnName="memMarkings" />
+          <ScalarProperty Name="BatchCode" ColumnName="BatchCode" />
+          <ScalarProperty Name="SerialNumbers" ColumnName="SerialNumbers" />
+          <ScalarProperty Name="Colour" ColumnName="Colour" />
+          <ScalarProperty Name="Calibre" ColumnName="Calibre" />
+          <ScalarProperty Name="HeadStamp" ColumnName="HeadStamp" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Depth" ColumnName="Depth" />
+          <ScalarProperty Name="Diameter" ColumnName="Diameter" />
+          <ScalarProperty Name="NumberRecovered" ColumnName="NumberRecovered" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="intID" ColumnName="intID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="textSearch" ColumnName="textSearch" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="People">
+      <EntityTypeMapping TypeName="FIADATABASEModel.Person">
+        <MappingFragment StoreEntitySet="Person">
+          <ScalarProperty Name="strURN" ColumnName="strURN" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="CurrentStatus" ColumnName="CurrentStatus" />
+          <ScalarProperty Name="ReportingAgency" ColumnName="ReportingAgency" />
+          <ScalarProperty Name="NHeadMoney" ColumnName="NHeadMoney" />
+          <ScalarProperty Name="AccusationStatus" ColumnName="AccusationStatus" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Aliases" ColumnName="Aliases" />
+          <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+          <ScalarProperty Name="FamilyName" ColumnName="FamilyName" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="PlaceOfBirth" ColumnName="PlaceOfBirth" />
+          <ScalarProperty Name="Tribe" ColumnName="Tribe" />
+          <ScalarProperty Name="CNIC" ColumnName="CNIC" />
+          <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+          <ScalarProperty Name="Religion" ColumnName="Religion" />
+          <ScalarProperty Name="Occupation" ColumnName="Occupation" />
+          <ScalarProperty Name="Education" ColumnName="Education" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="NormalDress" ColumnName="NormalDress" />
+          <ScalarProperty Name="BodyStructure" ColumnName="BodyStructure" />
+          <ScalarProperty Name="BodyBuild" ColumnName="BodyBuild" />
+          <ScalarProperty Name="BeardColor" ColumnName="BeardColor" />
+          <ScalarProperty Name="BaldType" ColumnName="BaldType" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="HeightInFeet" ColumnName="HeightInFeet" />
+          <ScalarProperty Name="Complexion" ColumnName="Complexion" />
+          <ScalarProperty Name="IdentificationMark" ColumnName="IdentificationMark" />
+          <ScalarProperty Name="PermanentIdentificationMark" ColumnName="PermanentIdentificationMark" />
+          <ScalarProperty Name="DistinguishingMarks" ColumnName="DistinguishingMarks" />
+          <ScalarProperty Name="CovertAppearance" ColumnName="CovertAppearance" />
+          <ScalarProperty Name="OvertAppearance" ColumnName="OvertAppearance" />
+          <ScalarProperty Name="TalkingStyle" ColumnName="TalkingStyle" />
+          <ScalarProperty Name="VoicePitch" ColumnName="VoicePitch" />
+          <ScalarProperty Name="HairCutStyle" ColumnName="HairCutStyle" />
+          <ScalarProperty Name="HairType" ColumnName="HairType" />
+          <ScalarProperty Name="HairColor" ColumnName="HairColor" />
+          <ScalarProperty Name="HairImplants" ColumnName="HairImplants" />
+          <ScalarProperty Name="Wig" ColumnName="Wig" />
+          <ScalarProperty Name="CheekStructure" ColumnName="CheekStructure" />
+          <ScalarProperty Name="ContactLenses" ColumnName="ContactLenses" />
+          <ScalarProperty Name="VFaceShape" ColumnName="VFaceShape" />
+          <ScalarProperty Name="EarStructure" ColumnName="EarStructure" />
+          <ScalarProperty Name="EyeColor" ColumnName="EyeColor" />
+          <ScalarProperty Name="EyeLook" ColumnName="EyeLook" />
+          <ScalarProperty Name="Eyebrows" ColumnName="Eyebrows" />
+          <ScalarProperty Name="EyeGlasses" ColumnName="EyeGlasses" />
+          <ScalarProperty Name="NoseStructure" ColumnName="NoseStructure" />
+          <ScalarProperty Name="LipStucture" ColumnName="LipStucture" />
+          <ScalarProperty Name="Mustaches" ColumnName="Mustaches" />
+          <ScalarProperty Name="MustachesColor" ColumnName="MustachesColor" />
+          <ScalarProperty Name="memRemarks" ColumnName="memRemarks" />
+          <ScalarProperty Name="intID" ColumnName="intID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="textSearch" ColumnName="textSearch" />
+          <ScalarProperty Name="iSHeadMoney" ColumnName="iSHeadMoney" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="FirNo" ColumnName="FirNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PersonAddresses">
+      <EntityTypeMapping TypeName="FIADATABASEModel.PersonAddress">
+        <MappingFragment StoreEntitySet="PersonAddress">
+          <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="ProvinceOrState" ColumnName="ProvinceOrState" />
+          <ScalarProperty Name="District" ColumnName="District" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="PersonstrURN" ColumnName="PersonstrURN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PersonPassportNoes">
+      <EntityTypeMapping TypeName="FIADATABASEModel.PersonPassportNo">
+        <MappingFragment StoreEntitySet="PersonPassportNo">
+          <ScalarProperty Name="PassPortID" ColumnName="PassPortID" />
+          <ScalarProperty Name="PassportNo" ColumnName="PassportNo" />
+          <ScalarProperty Name="PersonstrURN" ColumnName="PersonstrURN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pipes">
+      <EntityTypeMapping TypeName="FIADATABASEModel.Pipe">
+        <MappingFragment StoreEntitySet="Pipe">
+          <ScalarProperty Name="strURN" ColumnName="strURN" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Other" ColumnName="Other" />
+          <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+          <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+          <ScalarProperty Name="strCountryRecovered" ColumnName="strCountryRecovered" />
+          <ScalarProperty Name="strCountryOrigin" ColumnName="strCountryOrigin" />
+          <ScalarProperty Name="ExplosiveWeight" ColumnName="ExplosiveWeight" />
+          <ScalarProperty Name="memMarkings" ColumnName="memMarkings" />
+          <ScalarProperty Name="BatchCode" ColumnName="BatchCode" />
+          <ScalarProperty Name="Components" ColumnName="Components" />
+          <ScalarProperty Name="ECMaterial" ColumnName="ECMaterial" />
+          <ScalarProperty Name="ECManufacturer" ColumnName="ECManufacturer" />
+          <ScalarProperty Name="ECCountryOrigin" ColumnName="ECCountryOrigin" />
+          <ScalarProperty Name="ECLength" ColumnName="ECLength" />
+          <ScalarProperty Name="ECDiameter" ColumnName="ECDiameter" />
+          <ScalarProperty Name="ECMarkings" ColumnName="ECMarkings" />
+          <ScalarProperty Name="ECQuantity" ColumnName="ECQuantity" />
+          <ScalarProperty Name="MemRemarks" ColumnName="MemRemarks" />
+          <ScalarProperty Name="intID" ColumnName="intID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="textSearch" ColumnName="textSearch" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PoliceStations">
+      <EntityTypeMapping TypeName="FIADATABASEModel.PoliceStation">
+        <MappingFragment StoreEntitySet="PoliceStation">
+          <ScalarProperty Name="strURN" ColumnName="strURN" />
+          <ScalarProperty Name="strPoliceStation" ColumnName="strPoliceStation" />
+          <ScalarProperty Name="CityListstrURN" ColumnName="CityListstrURN" />
+          <ScalarProperty Name="intID" ColumnName="intID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="textSearch" ColumnName="textSearch" />
+          <ScalarProperty Name="DistrictListintID" ColumnName="DistrictListintID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PowerSources">
+      <EntityTypeMapping TypeName="FIADATABASEModel.PowerSource">
+        <MappingFragment StoreEntitySet="PowerSource">
+          <ScalarProperty Name="strURN" ColumnName="strURN" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Other" ColumnName="Other" />
+          <ScalarProperty Name="Make" ColumnName="Make" />
+          <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+          <ScalarProperty Name="CountryOrigin" ColumnName="CountryOrigin" />
+          <ScalarProperty Name="CountryRecovered" ColumnName="CountryRecovered" />
+          <ScalarProperty Name="Markings" ColumnName="Markings" />
+          <ScalarProperty Name="Colour" ColumnName="Colour" />
+          <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Voltage" ColumnName="Voltage" />
+          <ScalarProperty Name="Diameter" ColumnName="Diameter" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
+          <ScalarProperty Name="memRemarks" ColumnName="memRemarks" />
+          <ScalarProperty Name="intID" ColumnName="intID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="textSearch" ColumnName="textSearch" />
+          <ScalarProperty Name="BatchCode" ColumnName="BatchCode" />
+          <ScalarProperty Name="NumberRecovered" ColumnName="NumberRecovered" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Properties">
+      <EntityTypeMapping TypeName="FIADATABASEModel.Property">
+        <MappingFragment StoreEntitySet="Property">
+          <ScalarProperty Name="strURN" ColumnName="strURN" />
+          <ScalarProperty Name="PropertyName" ColumnName="PropertyName" />
+          <ScalarProperty Name="PropertyValue" ColumnName="PropertyValue" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="Addresses" ColumnName="Addresses" />
+          <ScalarProperty Name="MemRemarks" ColumnName="MemRemarks" />
+          <ScalarProperty Name="intID" ColumnName="intID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="textSearch" ColumnName="textSearch" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProvinceLists">
+      <EntityTypeMapping TypeName="FIADATABASEModel.ProvinceList">
+        <MappingFragment StoreEntitySet="ProvinceList">
+          <ScalarProperty Name="strURN" ColumnName="strURN" />
+          <ScalarProperty Name="strProvince" ColumnName="strProvince" />
+          <ScalarProperty Name="intID" ColumnName="intID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="textSearch" ColumnName="textSearch" />
+          <ScalarProperty Name="CountryListstrURN" ColumnName="CountryListstrURN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReportingAgencies">
+      <EntityTypeMapping TypeName="FIADATABASEModel.ReportingAgency">
+        <MappingFragment StoreEntitySet="ReportingAgency">
+          <ScalarProperty Name="ReportingAgencyID" ColumnName="ReportingAgencyID" />
+          <ScalarProperty Name="ReportingAgencyTitle" ColumnName="ReportingAgencyTitle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SocialMedias">
+      <EntityTypeMapping TypeName="FIADATABASEModel.SocialMedia">
+        <MappingFragment StoreEntitySet="SocialMedia">
+          <ScalarProperty Name="ProfileID" ColumnName="ProfileID" />
+          <ScalarProperty Name="SocialMediaProfile" ColumnName="SocialMediaProfile" />
+          <ScalarProperty Name="PersonstrURN" ColumnName="PersonstrURN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="FIADATABASEModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vehicles">
+      <EntityTypeMapping TypeName="FIADATABASEModel.Vehicle">
+        <MappingFragment StoreEntitySet="Vehicle">
+          <ScalarProperty Name="strURN" ColumnName="strURN" />
+          <ScalarProperty Name="VehicleType" ColumnName="VehicleType" />
+          <ScalarProperty Name="VehicleSubType" ColumnName="VehicleSubType" />
+          <ScalarProperty Name="MakeModel" ColumnName="MakeModel" />
+          <ScalarProperty Name="RegistrationNo" ColumnName="RegistrationNo" />
+          <ScalarProperty Name="ChasesNo" ColumnName="ChasesNo" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="size" ColumnName="size" />
+          <ScalarProperty Name="DeviceLocation" ColumnName="DeviceLocation" />
+          <ScalarProperty Name="memRemarks" ColumnName="memRemarks" />
+          <ScalarProperty Name="dteSent" ColumnName="dteSent" />
+          <ScalarProperty Name="intID" ColumnName="intID" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="textSearch" ColumnName="textSearch" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblIncidents">
+      <EntityTypeMapping TypeName="FIADATABASEModel.tblIncident">
+        <MappingFragment StoreEntitySet="tblIncident">
+          <ScalarProperty Name="intID" ColumnName="intID" />
+          <ScalarProperty Name="strURN" ColumnName="strURN" />
+          <ScalarProperty Name="strOperationName" ColumnName="strOperationName" />
+          <ScalarProperty Name="dteIncidentDate" ColumnName="dteIncidentDate" />
+          <ScalarProperty Name="dteIncidentTime" ColumnName="dteIncidentTime" />
+          <ScalarProperty Name="dteIncidentTimeEnd" ColumnName="dteIncidentTimeEnd" />
+          <ScalarProperty Name="strAddress" ColumnName="strAddress" />
+          <ScalarProperty Name="strCityTownProvince" ColumnName="strCityTownProvince" />
+          <ScalarProperty Name="strCountyState" ColumnName="strCountyState" />
+          <ScalarProperty Name="strPostalZip" ColumnName="strPostalZip" />
+          <ScalarProperty Name="strCommonwealthTerritory" ColumnName="strCommonwealthTerritory" />
+          <ScalarProperty Name="strCountry" ColumnName="strCountry" />
+          <ScalarProperty Name="intLatitude" ColumnName="intLatitude" />
+          <ScalarProperty Name="intLongitude" ColumnName="intLongitude" />
+          <ScalarProperty Name="strCaseFileRefNumber" ColumnName="strCaseFileRefNumber" />
+          <ScalarProperty Name="strDeliveryMethod" ColumnName="strDeliveryMethod" />
+          <ScalarProperty Name="strTarget" ColumnName="strTarget" />
+          <ScalarProperty Name="strMotive" ColumnName="strMotive" />
+          <ScalarProperty Name="strIncidentCategory" ColumnName="strIncidentCategory" />
+          <ScalarProperty Name="strOther" ColumnName="strOther" />
+          <ScalarProperty Name="optRecovered" ColumnName="optRecovered" />
+          <ScalarProperty Name="strPreIncidentThreat" ColumnName="strPreIncidentThreat" />
+          <ScalarProperty Name="strPostIncidentThreat" ColumnName="strPostIncidentThreat" />
+          <ScalarProperty Name="intNumberKilled" ColumnName="intNumberKilled" />
+          <ScalarProperty Name="intNumberInjured" ColumnName="intNumberInjured" />
+          <ScalarProperty Name="intNumberArrested" ColumnName="intNumberArrested" />
+          <ScalarProperty Name="strPrimaryMediaImageUrn" ColumnName="strPrimaryMediaImageUrn" />
+          <ScalarProperty Name="strLegacyCode" ColumnName="strLegacyCode" />
+          <ScalarProperty Name="dteIncidentDateWeekStart" ColumnName="dteIncidentDateWeekStart" />
+          <ScalarProperty Name="dteIncidentDateWeekEnd" ColumnName="dteIncidentDateWeekEnd" />
+          <ScalarProperty Name="intIncidentDay" ColumnName="intIncidentDay" />
+          <ScalarProperty Name="strDistrict" ColumnName="strDistrict" />
+          <ScalarProperty Name="strTargettedPersons" ColumnName="strTargettedPersons" />
+          <ScalarProperty Name="strLatestCaseProgress" ColumnName="strLatestCaseProgress" />
+          <ScalarProperty Name="strAdditionalRemarks" ColumnName="strAdditionalRemarks" />
+          <ScalarProperty Name="strFirNo" ColumnName="strFirNo" />
+          <ScalarProperty Name="strCasualtiesNames" ColumnName="strCasualtiesNames" />
+          <ScalarProperty Name="strInjuredNames" ColumnName="strInjuredNames" />
+          <ScalarProperty Name="strRoleOfSig" ColumnName="strRoleOfSig" />
+          <ScalarProperty Name="intIncidentMonth" ColumnName="intIncidentMonth" />
+          <ScalarProperty Name="intIncidentYear" ColumnName="intIncidentYear" />
+          <ScalarProperty Name="strTargetDescription" ColumnName="strTargetDescription" />
+          <ScalarProperty Name="strSubTargetName" ColumnName="strSubTargetName" />
+          <ScalarProperty Name="strWeaponName" ColumnName="strWeaponName" />
+          <ScalarProperty Name="strMotiveDescription" ColumnName="strMotiveDescription" />
+          <ScalarProperty Name="intSubTarget" ColumnName="intSubTarget" />
+          <ScalarProperty Name="intSuicideBorne" ColumnName="intSuicideBorne" />
+          <ScalarProperty Name="strCaseStatus" ColumnName="strCaseStatus" />
+          <ScalarProperty Name="strMilitaryWeaponType" ColumnName="strMilitaryWeaponType" />
+          <ScalarProperty Name="strTimeZone" ColumnName="strTimeZone" />
+          <ScalarProperty Name="intTimeOffset" ColumnName="intTimeOffset" />
+          <ScalarProperty Name="optLibrary" ColumnName="optLibrary" />
+          <ScalarProperty Name="optTransmit" ColumnName="optTransmit" />
+          <ScalarProperty Name="memRemarks" ColumnName="memRemarks" />
+          <ScalarProperty Name="excl_memTextSearch" ColumnName="excl_memTextSearch" />
+          <ScalarProperty Name="optCompliance" ColumnName="optCompliance" />
+          <ScalarProperty Name="strSecurityRating" ColumnName="strSecurityRating" />
+          <ScalarProperty Name="strCreatedBy" ColumnName="strCreatedBy" />
+          <ScalarProperty Name="dteCreated" ColumnName="dteCreated" />
+          <ScalarProperty Name="dteSent" ColumnName="dteSent" />
+          <ScalarProperty Name="dteLastModified" ColumnName="dteLastModified" />
+          <ScalarProperty Name="strLastModifiedBy" ColumnName="strLastModifiedBy" />
+          <ScalarProperty Name="optSuicideBorne" ColumnName="optSuicideBorne" />
+          <ScalarProperty Name="memRecoveries" ColumnName="memRecoveries" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="AspNetUserRoles" TypeName="FIADATABASEModel.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+      <EndProperty Name="AspNetRoles">
+        <ScalarProperty Name="Id" ColumnName="RoleId" />
+      </EndProperty>
+      <EndProperty Name="AspNetUsers">
+        <ScalarProperty Name="Id" ColumnName="UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="FIADATABASEModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="FIADATABASEModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="FIADATABASEModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="FIADATABASEModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FIADATABASEModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="FIADATABASEModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="FIADATABASEModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="FIADATABASEModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="FIADATABASEModel.Store.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>

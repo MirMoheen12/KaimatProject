@@ -1,0 +1,1396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FIADATABASEModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="C__EFMigrationsHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+    </Key>
+    <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Address">
+    <Key>
+      <PropertyRef Name="strURN" />
+    </Key>
+    <Property Name="strURN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AddressDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AddressName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AddressType" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="HouseNumber" Type="Int32" />
+    <Property Name="Country" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Province" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="District" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="StreetNumber" Type="Int32" />
+    <Property Name="Mohallah" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Village" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Town" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PostOffice" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="TehsilTaluka" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PostalZip" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="CommonwealthTerritory" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Latitude" Type="Single" />
+    <Property Name="Longitude" Type="Single" />
+    <Property Name="Other1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Other2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="memRemarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="dteSent" Type="DateTime" Precision="7" />
+    <Property Name="intID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="7" />
+    <Property Name="CreatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="textSearch" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="AspNetRoleClaim">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleId" Type="String" MaxLength="450" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetRole" Relationship="Self.FK_AspNetRoleClaims_AspNetRoles_RoleId" FromRole="AspNetRoleClaims" ToRole="AspNetRoles" />
+  </EntityType>
+  <EntityType Name="AspNetRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="450" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="NormalizedName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="ConcurrencyStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetRoleClaims" Relationship="Self.FK_AspNetRoleClaims_AspNetRoles_RoleId" FromRole="AspNetRoles" ToRole="AspNetRoleClaims" />
+    <NavigationProperty Name="AspNetUsers" Relationship="Self.AspNetUserRoles" FromRole="AspNetRoles" ToRole="AspNetUsers" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaim">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="String" MaxLength="450" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUser" Relationship="Self.FK_AspNetUserClaims_AspNetUsers_UserId" FromRole="AspNetUserClaims" ToRole="AspNetUsers" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogin">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+    </Key>
+    <Property Name="LoginProvider" Type="String" MaxLength="450" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProviderKey" Type="String" MaxLength="450" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProviderDisplayName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UserId" Type="String" MaxLength="450" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="AspNetUser" Relationship="Self.FK_AspNetUserLogins_AspNetUsers_UserId" FromRole="AspNetUserLogins" ToRole="AspNetUsers" />
+  </EntityType>
+  <EntityType Name="AspNetUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="450" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Discriminator" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="7" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="7" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="UpdatedBy" Type="Guid" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="IsAllow" Type="Boolean" />
+    <Property Name="Device_token" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UserName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="NormalizedUserName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="NormalizedEmail" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ConcurrencyStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="LockoutEnd" Type="DateTimeOffset" Precision="7" />
+    <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+    <Property Name="UserRole" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUserClaims" Relationship="Self.FK_AspNetUserClaims_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserClaims" />
+    <NavigationProperty Name="AspNetUserLogins" Relationship="Self.FK_AspNetUserLogins_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserLogins" />
+    <NavigationProperty Name="AspNetUserTokens" Relationship="Self.FK_AspNetUserTokens_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserTokens" />
+    <NavigationProperty Name="IpLogs" Relationship="Self.FK_IpLogs_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="IpLogs" />
+    <NavigationProperty Name="AspNetRoles" Relationship="Self.AspNetUserRoles" FromRole="AspNetUsers" ToRole="AspNetRoles" />
+  </EntityType>
+  <EntityType Name="AspNetUserToken">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="UserId" Type="String" MaxLength="450" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LoginProvider" Type="String" MaxLength="450" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="450" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Value" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUser" Relationship="Self.FK_AspNetUserTokens_AspNetUsers_UserId" FromRole="AspNetUserTokens" ToRole="AspNetUsers" />
+  </EntityType>
+  <EntityType Name="BankAccount">
+    <Key>
+      <PropertyRef Name="strURN" />
+    </Key>
+    <Property Name="strURN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AccountNo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BranchCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Bank" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Branch" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MemRemarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="intID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="7" />
+    <Property Name="CreatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="textSearch" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="BaseLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="strURN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedOn" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="textSearch" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CBRN">
+    <Key>
+      <PropertyRef Name="strURN" />
+    </Key>
+    <Property Name="strURN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="strCountryOrigin" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="strType" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="strQuantityMeasurement" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="strMethodDelivery" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="strManufacturer" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="strCountryRecovered" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="strUNNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="strSpecialPrecautions" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="strOther" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="strSecurityRating" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="intID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="7" />
+    <Property Name="CreatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="textSearch" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="strHazard" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="strName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="strPrimaryMediaImageUrn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="intQuantity" Type="Int32" />
+    <Property Name="memRemarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="strCategory" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="strDescription" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Chemical">
+    <Key>
+      <PropertyRef Name="strURN" />
+    </Key>
+    <Property Name="strURN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="OtherNames" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CountryRecovered" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CountryOrigin" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CasNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RtecsNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UnNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EcNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ChemicalFormula" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="PhysicalAppearance" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ChemicalDangers" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="OccupationalExposureLimitsTLV" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="OccupationalExposureLimitsMAK" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="RoutesOfExposure" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="SpillageDisposal" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="Packaging" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="Labelling" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="SafeStorage" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="TransportEmergencyCard" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="NfpaCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="UnHazardClass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UnSubsidiaryRisks" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UnPackGroup" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HazardExposure" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BoilingPointLow" Type="Single" />
+    <Property Name="BoilingPointHigh" Type="Single" />
+    <Property Name="MeltingPointHighLow" Type="Single" />
+    <Property Name="MeltingPointHigh" Type="Single" />
+    <Property Name="DensityLow" Type="Single" />
+    <Property Name="DensityHigh" Type="Single" />
+    <Property Name="RelativeDensityLow" Type="Single" />
+    <Property Name="RelativeDensityHigh" Type="Single" />
+    <Property Name="WaterSolubility" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="VapourPressureLow" Type="Single" />
+    <Property Name="VapourPressureHigh" Type="Single" />
+    <Property Name="RelativeVapourDensityLow" Type="Single" />
+    <Property Name="RelativeVapourDensityHigh" Type="Single" />
+    <Property Name="FlashPointLow" Type="Single" />
+    <Property Name="FlashPointHigh" Type="Single" />
+    <Property Name="AutoIgnitionTempLow" Type="Single" />
+    <Property Name="AutoIgnitionTempHigh" Type="Single" />
+    <Property Name="ExplosiveLimits" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="OctanolWaterPartitionLow" Type="Single" />
+    <Property Name="OctanolWaterPartitionHigh" Type="Single" />
+    <Property Name="InhalationRisk" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="EnvironmentalData" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="memRemarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="dteSent" Type="DateTime" Precision="7" />
+    <Property Name="intID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="7" />
+    <Property Name="CreatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="textSearch" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CityList">
+    <Key>
+      <PropertyRef Name="strURN" />
+    </Key>
+    <Property Name="strURN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="strCityCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="strCity" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DistrictListstrURN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="intID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="7" />
+    <Property Name="CreatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="textSearch" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="DistrictList" Relationship="Self.FK_CityList_DistrictList_DistrictListstrURN" FromRole="CityList" ToRole="DistrictList" />
+    <NavigationProperty Name="PoliceStations" Relationship="Self.FK_PoliceStation_CityList_CityListstrURN" FromRole="CityList" ToRole="PoliceStation" />
+  </EntityType>
+  <EntityType Name="CommonLink">
+    <Key>
+      <PropertyRef Name="strURN" />
+    </Key>
+    <Property Name="strURN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="strURNDest" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="strURNSource" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="strLink" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="intID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="7" />
+    <Property Name="CreatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="InformationEvaluation" Type="Int32" />
+    <Property Name="SourceEvaluation" Type="Int32" />
+    <Property Name="intDbIdDest" Type="Int32" Nullable="false" />
+    <Property Name="intDbIdSource" Type="Int32" Nullable="false" />
+    <Property Name="optBiDirectional" Type="Boolean" />
+    <Property Name="textSearch" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Communication">
+    <Key>
+      <PropertyRef Name="strURN" />
+    </Key>
+    <Property Name="strURN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CommType" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CommDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CommName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Other" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="WebValue" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Number" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ServiceProvider" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="CountryOrigin" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="memRemarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="dteSent" Type="DateTime" Precision="7" />
+    <Property Name="intID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="7" />
+    <Property Name="CreatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="textSearch" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Component">
+    <Key>
+      <PropertyRef Name="strURN" />
+    </Key>
+    <Property Name="strURN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CountryOrigin" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Material" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Manufacturer" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MethodDelivery" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="QuantityWeight" Type="Single" />
+    <Property Name="QuantityNo" Type="Single" />
+    <Property Name="CountryRecovered" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Length" Type="Single" />
+    <Property Name="Width" Type="Single" />
+    <Property Name="Height" Type="Single" />
+    <Property Name="Diameter" Type="Single" />
+    <Property Name="Colour" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Markings" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="memRemarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="dteSent" Type="DateTime" Precision="7" />
+    <Property Name="intID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="7" />
+    <Property Name="CreatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="textSearch" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ContactNumber">
+    <Key>
+      <PropertyRef Name="ContactID" />
+    </Key>
+    <Property Name="ContactID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContactNo" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CountryList">
+    <Key>
+      <PropertyRef Name="strURN" />
+    </Key>
+    <Property Name="strURN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="strCountryCode" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="strCountry" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="intID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="7" />
+    <Property Name="CreatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="textSearch" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ProvinceLists" Relationship="Self.FK_ProvinceList_CountryList_CountryListstrURN" FromRole="CountryList" ToRole="ProvinceList" />
+  </EntityType>
+  <EntityType Name="DatabaseList">
+    <Key>
+      <PropertyRef Name="strURN" />
+    </Key>
+    <Property Name="strURN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="intType" Type="Int32" />
+    <Property Name="strTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="strTable" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="strTranslation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="optTransmit" Type="Boolean" />
+    <Property Name="optPhysicalDatabase" Type="Boolean" Nullable="false" />
+    <Property Name="dteSent" Type="DateTime" Precision="7" />
+    <Property Name="intID" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="7" />
+    <Property Name="CreatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="textSearch" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="strControllerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Detonator">
+    <Key>
+      <PropertyRef Name="strURN" />
+    </Key>
+    <Property Name="strURN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Category" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Other" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Quantity" Type="Single" />
+    <Property Name="CountryOfRecovery" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Manufacturer" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CountryOfOrigin" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Brand" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Model" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CapMaterial" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CapColor" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CapLength" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CapDiameter" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Crimp" Type="Int32" />
+    <Property Name="CrimpType" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PlugColor" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PlugMaterial" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="WireColor" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="WireColor2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="WireDiameter" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="WireMaterial" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CaseTubeMaterial" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CaseTubeColor" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CaseTubeLength" Type="Single" />
+    <Property Name="CaseTubeDiameter" Type="Single" />
+    <Property Name="BaseShape" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BaseMarking" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BatchCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MemRemarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="StrDateEstablished" Type="DateTime" Precision="7" />
+    <Property Name="intID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="7" />
+    <Property Name="CreatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="textSearch" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="DistrictList">
+    <Key>
+      <PropertyRef Name="strURN" />
+    </Key>
+    <Property Name="strURN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="strDistrict" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ProvinceListstrURN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="intID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="7" />
+    <Property Name="CreatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="textSearch" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProvinceListintID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CityLists" Relationship="Self.FK_CityList_DistrictList_DistrictListstrURN" FromRole="DistrictList" ToRole="CityList" />
+    <NavigationProperty Name="ProvinceList" Relationship="Self.FK_DistrictList_ProvinceList_ProvinceListstrURN" FromRole="DistrictList" ToRole="ProvinceList" />
+  </EntityType>
+  <EntityType Name="Equipment">
+    <Key>
+      <PropertyRef Name="strURN" />
+    </Key>
+    <Property Name="strURN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Category" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="SerialNumber" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Manufacturer" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="memRemarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="dteSent" Type="DateTime" Precision="7" />
+    <Property Name="intID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="7" />
+    <Property Name="CreatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="textSearch" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Evidence">
+    <Key>
+      <PropertyRef Name="strURN" />
+    </Key>
+    <Property Name="strURN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Item" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="Date" Type="DateTime" Precision="7" />
+    <Property Name="Time" Type="DateTime" Precision="7" />
+    <Property Name="CollectedBy" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Location" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="memRemarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="dteSent" Type="DateTime" Precision="7" />
+    <Property Name="intID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="7" />
+    <Property Name="CreatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="textSearch" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Explosive">
+    <Key>
+      <PropertyRef Name="strURN" />
+    </Key>
+    <Property Name="strURN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Category" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Quantity" Type="Single" />
+    <Property Name="MeasurementUnit" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BrandName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Manufacturer" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CountryOrigin" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CountryRecovered" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Markings" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Colour" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Packaging" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ExplosiveLength" Type="Single" />
+    <Property Name="ExplosiveWidth" Type="Single" />
+    <Property Name="ExplosiveHeight" Type="Single" />
+    <Property Name="ExplosiveWeight" Type="Single" />
+    <Property Name="ExplosiveDiameter" Type="Single" />
+    <Property Name="memRemarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="dteSent" Type="DateTime" Precision="7" />
+    <Property Name="intID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="7" />
+    <Property Name="CreatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="textSearch" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Firearm">
+    <Key>
+      <PropertyRef Name="strURN" />
+    </Key>
+    <Property Name="strURN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Make" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Model" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Logo" Type="Boolean" />
+    <Property Name="CountryOrigin" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Impoter" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SerialNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SerialErased" Type="Boolean" />
+    <Property Name="Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Action" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Calibre" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="CountryRecovered" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BarrelLength" Type="Single" />
+    <Property Name="RoundsHeld" Type="Int32" />
+    <Property Name="Deactivated" Type="Boolean" />
+    <Property Name="Reactivated" Type="Boolean" />
+    <Property Name="FactoryMade" Type="Boolean" />
+    <Property Name="Imitation" Type="Boolean" />
+    <Property Name="OwnersCertificateNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="memRemarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="dteSent" Type="DateTime" Precision="7" />
+    <Property Name="intID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="7" />
+    <Property Name="CreatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="textSearch" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Group">
+    <Key>
+      <PropertyRef Name="strURN" />
+    </Key>
+    <Property Name="strURN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GroupName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SubCategory" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CountryOrigin" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="GroupTo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="HeadName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MemGoals" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="strDeclaredByWhom" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Strength" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Area" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Country" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Province" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="District" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="PostalZip" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MemRemarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DateEstablished" Type="DateTime" Precision="7" />
+    <Property Name="intID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="7" />
+    <Property Name="CreatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="textSearch" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GroupReportingAgency" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Incident">
+    <Key>
+      <PropertyRef Name="strURN" />
+    </Key>
+    <Property Name="strURN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="strOperationName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="FirNo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="RegYear" Type="Int32" />
+    <Property Name="US" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Country" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Province" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="District" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="PostalZip" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="PoliceStation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IncidentDate" Type="DateTime" Precision="7" />
+    <Property Name="IncidentTime" Type="DateTime" Precision="7" />
+    <Property Name="IncidentTimeEnd" Type="DateTime" Precision="7" />
+    <Property Name="Latitude" Type="Single" />
+    <Property Name="Longitude" Type="Single" />
+    <Property Name="NumberKilled" Type="Int32" />
+    <Property Name="NumberInjured" Type="Int32" />
+    <Property Name="InjuredName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CasualtiesNames" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SuicideBomb" Type="Int32" />
+    <Property Name="CTWRemarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Target" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Motive" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Recoveries" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CrimeSceneRecoveries" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CaseStatus" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="strCaseProgress" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Weapon" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ModusofOperandi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="dteSent" Type="DateTime" Precision="7" />
+    <Property Name="intID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="7" />
+    <Property Name="CreatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="textSearch" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NumberArrested" Type="Int32" />
+    <Property Name="PreIncidentThread" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Reportedby" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="InitiationSystem">
+    <Key>
+      <PropertyRef Name="strURN" />
+    </Key>
+    <Property Name="strURN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Category" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Electric" Type="Boolean" />
+    <Property Name="Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Other" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Make" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Manufacturer" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CountryOrigin" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Size" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Length" Type="Single" />
+    <Property Name="Width" Type="Single" />
+    <Property Name="Height" Type="Single" />
+    <Property Name="Diameter" Type="Single" />
+    <Property Name="Voltage" Type="Single" />
+    <Property Name="Markings" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="BatchCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SerialNumbers" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Colour" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="NumberRecovered" Type="Int32" />
+    <Property Name="CountryRecovered" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="memRemarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="dteSent" Type="DateTime" Precision="7" />
+    <Property Name="intID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="7" />
+    <Property Name="CreatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="textSearch" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="IpLog">
+    <Key>
+      <PropertyRef Name="strURN" />
+    </Key>
+    <Property Name="strURN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IP" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UserId" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="intID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="7" />
+    <Property Name="CreatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="textSearch" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUser" Relationship="Self.FK_IpLogs_AspNetUsers_UserId" FromRole="IpLogs" ToRole="AspNetUsers" />
+  </EntityType>
+  <EntityType Name="MediaFile">
+    <Key>
+      <PropertyRef Name="strURN" />
+    </Key>
+    <Property Name="strURN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FileName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ContentType" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ContentLength" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FilePath" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="intID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="7" />
+    <Property Name="CreatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="textSearch" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Ordinance">
+    <Key>
+      <PropertyRef Name="strURN" />
+    </Key>
+    <Property Name="strURN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Category" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Other" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Manufacturer" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BrandName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CountryRecovered" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CountryOrigin" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ExplosiveWeight" Type="Single" />
+    <Property Name="memMarkings" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BatchCode" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SerialNumbers" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Colour" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Calibre" Type="Single" />
+    <Property Name="HeadStamp" Type="Boolean" />
+    <Property Name="Length" Type="Single" />
+    <Property Name="Width" Type="Single" />
+    <Property Name="Depth" Type="Single" />
+    <Property Name="Diameter" Type="Single" />
+    <Property Name="NumberRecovered" Type="Single" />
+    <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="intID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="7" />
+    <Property Name="CreatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="textSearch" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Ordnance">
+    <Key>
+      <PropertyRef Name="strURN" />
+    </Key>
+    <Property Name="strURN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Category" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Other" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Manufacturer" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BrandName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CountryRecovered" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CountryOrigin" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ExplosiveWeight" Type="Single" />
+    <Property Name="memMarkings" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BatchCode" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SerialNumbers" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Colour" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Calibre" Type="Single" />
+    <Property Name="HeadStamp" Type="Boolean" />
+    <Property Name="Length" Type="Single" />
+    <Property Name="Width" Type="Single" />
+    <Property Name="Depth" Type="Single" />
+    <Property Name="Diameter" Type="Single" />
+    <Property Name="NumberRecovered" Type="Single" />
+    <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="intID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="7" />
+    <Property Name="CreatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="textSearch" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Person">
+    <Key>
+      <PropertyRef Name="strURN" />
+    </Key>
+    <Property Name="strURN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Category" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CurrentStatus" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ReportingAgency" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="NHeadMoney" Type="Int32" />
+    <Property Name="AccusationStatus" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Aliases" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FatherName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="FamilyName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DOB" Type="DateTime" Precision="7" />
+    <Property Name="PlaceOfBirth" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Tribe" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="CNIC" Type="Int64" />
+    <Property Name="MaritalStatus" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Religion" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Occupation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Education" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NormalDress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BodyStructure" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BodyBuild" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BeardColor" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="BaldType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Height" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HeightInFeet" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Complexion" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="IdentificationMark" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PermanentIdentificationMark" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DistinguishingMarks" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CovertAppearance" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="OvertAppearance" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="TalkingStyle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VoicePitch" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HairCutStyle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HairType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HairColor" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="HairImplants" Type="Boolean" Nullable="false" />
+    <Property Name="Wig" Type="Boolean" Nullable="false" />
+    <Property Name="CheekStructure" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ContactLenses" Type="Boolean" />
+    <Property Name="VFaceShape" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EarStructure" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EyeColor" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="EyeLook" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Eyebrows" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EyeGlasses" Type="Boolean" />
+    <Property Name="NoseStructure" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LipStucture" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Mustaches" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MustachesColor" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="memRemarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="intID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="7" />
+    <Property Name="CreatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="textSearch" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="iSHeadMoney" Type="Boolean" Nullable="false" />
+    <Property Name="isActive" Type="Boolean" Nullable="false" />
+    <Property Name="FirNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="PersonAddresses" Relationship="Self.FK_PersonAddress_Person_PersonstrURN" FromRole="Person" ToRole="PersonAddress" />
+    <NavigationProperty Name="PersonPassportNoes" Relationship="Self.FK_PersonPassportNo_Person_PersonstrURN" FromRole="Person" ToRole="PersonPassportNo" />
+    <NavigationProperty Name="SocialMedias" Relationship="Self.FK_SocialMedia_Person_PersonstrURN" FromRole="Person" ToRole="SocialMedia" />
+  </EntityType>
+  <EntityType Name="PersonAddress">
+    <Key>
+      <PropertyRef Name="AddressID" />
+    </Key>
+    <Property Name="AddressID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Country" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ProvinceOrState" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="District" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PostalCode" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PersonstrURN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Person" Relationship="Self.FK_PersonAddress_Person_PersonstrURN" FromRole="PersonAddress" ToRole="Person" />
+  </EntityType>
+  <EntityType Name="PersonPassportNo">
+    <Key>
+      <PropertyRef Name="PassPortID" />
+    </Key>
+    <Property Name="PassPortID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PassportNo" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="PersonstrURN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Person" Relationship="Self.FK_PersonPassportNo_Person_PersonstrURN" FromRole="PersonPassportNo" ToRole="Person" />
+  </EntityType>
+  <EntityType Name="Pipe">
+    <Key>
+      <PropertyRef Name="strURN" />
+    </Key>
+    <Property Name="strURN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Category" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Other" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Manufacturer" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BrandName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="strCountryRecovered" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="strCountryOrigin" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ExplosiveWeight" Type="Single" />
+    <Property Name="memMarkings" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BatchCode" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Components" Type="Single" />
+    <Property Name="ECMaterial" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ECManufacturer" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ECCountryOrigin" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ECLength" Type="Single" />
+    <Property Name="ECDiameter" Type="Single" />
+    <Property Name="ECMarkings" Type="Single" />
+    <Property Name="ECQuantity" Type="Single" />
+    <Property Name="MemRemarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="intID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="7" />
+    <Property Name="CreatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="textSearch" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PoliceStation">
+    <Key>
+      <PropertyRef Name="strURN" />
+    </Key>
+    <Property Name="strURN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="strPoliceStation" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CityListstrURN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="intID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="7" />
+    <Property Name="CreatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="textSearch" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DistrictListintID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CityList" Relationship="Self.FK_PoliceStation_CityList_CityListstrURN" FromRole="PoliceStation" ToRole="CityList" />
+  </EntityType>
+  <EntityType Name="PowerSource">
+    <Key>
+      <PropertyRef Name="strURN" />
+    </Key>
+    <Property Name="strURN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Category" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Width" Type="Single" />
+    <Property Name="Other" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Make" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Manufacturer" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CountryOrigin" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CountryRecovered" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Markings" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Colour" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SerialNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Height" Type="Single" />
+    <Property Name="Voltage" Type="Single" />
+    <Property Name="Diameter" Type="Single" />
+    <Property Name="Length" Type="Single" />
+    <Property Name="memRemarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="intID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="7" />
+    <Property Name="CreatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="textSearch" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BatchCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="NumberRecovered" Type="Int32" />
+    <Property Name="Size" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Property">
+    <Key>
+      <PropertyRef Name="strURN" />
+    </Key>
+    <Property Name="strURN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PropertyName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PropertyValue" Type="Single" />
+    <Property Name="Currency" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Addresses" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MemRemarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="intID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="7" />
+    <Property Name="CreatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="textSearch" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ProvinceList">
+    <Key>
+      <PropertyRef Name="strURN" />
+    </Key>
+    <Property Name="strURN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="strProvince" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="intID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="7" />
+    <Property Name="CreatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="textSearch" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CountryListstrURN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CountryList" Relationship="Self.FK_ProvinceList_CountryList_CountryListstrURN" FromRole="ProvinceList" ToRole="CountryList" />
+    <NavigationProperty Name="DistrictLists" Relationship="Self.FK_DistrictList_ProvinceList_ProvinceListstrURN" FromRole="ProvinceList" ToRole="DistrictList" />
+  </EntityType>
+  <EntityType Name="ReportingAgency">
+    <Key>
+      <PropertyRef Name="ReportingAgencyID" />
+    </Key>
+    <Property Name="ReportingAgencyID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ReportingAgencyTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SocialMedia">
+    <Key>
+      <PropertyRef Name="ProfileID" />
+    </Key>
+    <Property Name="ProfileID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SocialMediaProfile" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PersonstrURN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Person" Relationship="Self.FK_SocialMedia_Person_PersonstrURN" FromRole="SocialMedia" ToRole="Person" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Vehicle">
+    <Key>
+      <PropertyRef Name="strURN" />
+    </Key>
+    <Property Name="strURN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="VehicleType" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="VehicleSubType" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MakeModel" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="RegistrationNo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ChasesNo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Color" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="size" Type="Single" />
+    <Property Name="DeviceLocation" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="memRemarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="dteSent" Type="DateTime" Precision="7" />
+    <Property Name="intID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="7" />
+    <Property Name="CreatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="textSearch" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblIncident">
+    <Key>
+      <PropertyRef Name="intID" />
+      <PropertyRef Name="strURN" />
+    </Key>
+    <Property Name="intID" Type="Int32" Nullable="false" />
+    <Property Name="strURN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="strOperationName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="dteIncidentDate" Type="DateTime" Precision="3" />
+    <Property Name="dteIncidentTime" Type="DateTime" Precision="3" />
+    <Property Name="dteIncidentTimeEnd" Type="DateTime" Precision="3" />
+    <Property Name="strAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="strCityTownProvince" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="strCountyState" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="strPostalZip" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="strCommonwealthTerritory" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="strCountry" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="intLatitude" Type="Double" />
+    <Property Name="intLongitude" Type="Double" />
+    <Property Name="strCaseFileRefNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="strDeliveryMethod" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="strTarget" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="strMotive" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="strIncidentCategory" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="strOther" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="optRecovered" Type="Boolean" />
+    <Property Name="strPreIncidentThreat" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="strPostIncidentThreat" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="intNumberKilled" Type="Int32" />
+    <Property Name="intNumberInjured" Type="Int32" />
+    <Property Name="intNumberArrested" Type="Int32" />
+    <Property Name="strPrimaryMediaImageUrn" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="strLegacyCode" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="dteIncidentDateWeekStart" Type="DateTime" Precision="3" />
+    <Property Name="dteIncidentDateWeekEnd" Type="DateTime" Precision="3" />
+    <Property Name="intIncidentDay" Type="Int32" />
+    <Property Name="strDistrict" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="strTargettedPersons" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="strLatestCaseProgress" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="strAdditionalRemarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="strFirNo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="strCasualtiesNames" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="strInjuredNames" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="strRoleOfSig" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="intIncidentMonth" Type="Int32" />
+    <Property Name="intIncidentYear" Type="Int32" />
+    <Property Name="strTargetDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="strSubTargetName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="strWeaponName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="strMotiveDescription" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="intSubTarget" Type="Int32" />
+    <Property Name="intSuicideBorne" Type="Int32" />
+    <Property Name="strCaseStatus" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="strMilitaryWeaponType" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="strTimeZone" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="intTimeOffset" Type="Int32" />
+    <Property Name="optLibrary" Type="Boolean" />
+    <Property Name="optTransmit" Type="Boolean" />
+    <Property Name="memRemarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="excl_memTextSearch" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="optCompliance" Type="Boolean" />
+    <Property Name="strSecurityRating" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="strCreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="dteCreated" Type="DateTime" Precision="3" />
+    <Property Name="dteSent" Type="DateTime" Precision="3" />
+    <Property Name="dteLastModified" Type="DateTime" Precision="3" />
+    <Property Name="strLastModifiedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="optSuicideBorne" Type="Boolean" />
+    <Property Name="memRecoveries" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_AspNetRoleClaims_AspNetRoles_RoleId">
+    <End Role="AspNetRoles" Type="Self.AspNetRole" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetRoleClaims" Type="Self.AspNetRoleClaim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetRoles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetRoleClaims">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AspNetUserClaims_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserClaims" Type="Self.AspNetUserClaim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaims">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AspNetUserLogins_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserLogins" Type="Self.AspNetUserLogin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserLogins">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AspNetUserTokens_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserTokens" Type="Self.AspNetUserToken" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserTokens">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IpLogs_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="0..1" />
+    <End Role="IpLogs" Type="Self.IpLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IpLogs">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CityList_DistrictList_DistrictListstrURN">
+    <End Role="DistrictList" Type="Self.DistrictList" Multiplicity="0..1" />
+    <End Role="CityList" Type="Self.CityList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DistrictList">
+        <PropertyRef Name="strURN" />
+      </Principal>
+      <Dependent Role="CityList">
+        <PropertyRef Name="DistrictListstrURN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PoliceStation_CityList_CityListstrURN">
+    <End Role="CityList" Type="Self.CityList" Multiplicity="0..1" />
+    <End Role="PoliceStation" Type="Self.PoliceStation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CityList">
+        <PropertyRef Name="strURN" />
+      </Principal>
+      <Dependent Role="PoliceStation">
+        <PropertyRef Name="CityListstrURN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProvinceList_CountryList_CountryListstrURN">
+    <End Role="CountryList" Type="Self.CountryList" Multiplicity="0..1" />
+    <End Role="ProvinceList" Type="Self.ProvinceList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CountryList">
+        <PropertyRef Name="strURN" />
+      </Principal>
+      <Dependent Role="ProvinceList">
+        <PropertyRef Name="CountryListstrURN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DistrictList_ProvinceList_ProvinceListstrURN">
+    <End Role="ProvinceList" Type="Self.ProvinceList" Multiplicity="0..1" />
+    <End Role="DistrictList" Type="Self.DistrictList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProvinceList">
+        <PropertyRef Name="strURN" />
+      </Principal>
+      <Dependent Role="DistrictList">
+        <PropertyRef Name="ProvinceListstrURN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonAddress_Person_PersonstrURN">
+    <End Role="Person" Type="Self.Person" Multiplicity="0..1" />
+    <End Role="PersonAddress" Type="Self.PersonAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="strURN" />
+      </Principal>
+      <Dependent Role="PersonAddress">
+        <PropertyRef Name="PersonstrURN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonPassportNo_Person_PersonstrURN">
+    <End Role="Person" Type="Self.Person" Multiplicity="0..1" />
+    <End Role="PersonPassportNo" Type="Self.PersonPassportNo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="strURN" />
+      </Principal>
+      <Dependent Role="PersonPassportNo">
+        <PropertyRef Name="PersonstrURN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SocialMedia_Person_PersonstrURN">
+    <End Role="Person" Type="Self.Person" Multiplicity="0..1" />
+    <End Role="SocialMedia" Type="Self.SocialMedia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="strURN" />
+      </Principal>
+      <Dependent Role="SocialMedia">
+        <PropertyRef Name="PersonstrURN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AspNetUserRoles">
+    <End Role="AspNetRoles" Type="Self.AspNetRole" Multiplicity="*" />
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="FIADATABASEEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C__EFMigrationsHistory" EntityType="Self.C__EFMigrationsHistory" />
+    <EntitySet Name="Addresses" EntityType="Self.Address" />
+    <EntitySet Name="AspNetRoleClaims" EntityType="Self.AspNetRoleClaim" />
+    <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRole" />
+    <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaim" />
+    <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogin" />
+    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUser" />
+    <EntitySet Name="AspNetUserTokens" EntityType="Self.AspNetUserToken" />
+    <EntitySet Name="BankAccounts" EntityType="Self.BankAccount" />
+    <EntitySet Name="BaseLogs" EntityType="Self.BaseLog" />
+    <EntitySet Name="CBRNs" EntityType="Self.CBRN" />
+    <EntitySet Name="Chemicals" EntityType="Self.Chemical" />
+    <EntitySet Name="CityLists" EntityType="Self.CityList" />
+    <EntitySet Name="CommonLinks" EntityType="Self.CommonLink" />
+    <EntitySet Name="Communications" EntityType="Self.Communication" />
+    <EntitySet Name="Components" EntityType="Self.Component" />
+    <EntitySet Name="ContactNumbers" EntityType="Self.ContactNumber" />
+    <EntitySet Name="CountryLists" EntityType="Self.CountryList" />
+    <EntitySet Name="DatabaseLists" EntityType="Self.DatabaseList" />
+    <EntitySet Name="Detonators" EntityType="Self.Detonator" />
+    <EntitySet Name="DistrictLists" EntityType="Self.DistrictList" />
+    <EntitySet Name="Equipments" EntityType="Self.Equipment" />
+    <EntitySet Name="Evidences" EntityType="Self.Evidence" />
+    <EntitySet Name="Explosives" EntityType="Self.Explosive" />
+    <EntitySet Name="Firearms" EntityType="Self.Firearm" />
+    <EntitySet Name="Groups" EntityType="Self.Group" />
+    <EntitySet Name="Incidents" EntityType="Self.Incident" />
+    <EntitySet Name="InitiationSystems" EntityType="Self.InitiationSystem" />
+    <EntitySet Name="IpLogs" EntityType="Self.IpLog" />
+    <EntitySet Name="MediaFiles" EntityType="Self.MediaFile" />
+    <EntitySet Name="Ordinances" EntityType="Self.Ordinance" />
+    <EntitySet Name="Ordnances" EntityType="Self.Ordnance" />
+    <EntitySet Name="People" EntityType="Self.Person" />
+    <EntitySet Name="PersonAddresses" EntityType="Self.PersonAddress" />
+    <EntitySet Name="PersonPassportNoes" EntityType="Self.PersonPassportNo" />
+    <EntitySet Name="Pipes" EntityType="Self.Pipe" />
+    <EntitySet Name="PoliceStations" EntityType="Self.PoliceStation" />
+    <EntitySet Name="PowerSources" EntityType="Self.PowerSource" />
+    <EntitySet Name="Properties" EntityType="Self.Property" />
+    <EntitySet Name="ProvinceLists" EntityType="Self.ProvinceList" />
+    <EntitySet Name="ReportingAgencies" EntityType="Self.ReportingAgency" />
+    <EntitySet Name="SocialMedias" EntityType="Self.SocialMedia" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="Vehicles" EntityType="Self.Vehicle" />
+    <EntitySet Name="tblIncidents" EntityType="Self.tblIncident" />
+    <AssociationSet Name="FK_AspNetRoleClaims_AspNetRoles_RoleId" Association="Self.FK_AspNetRoleClaims_AspNetRoles_RoleId">
+      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+      <End Role="AspNetRoleClaims" EntitySet="AspNetRoleClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AspNetUserClaims_AspNetUsers_UserId" Association="Self.FK_AspNetUserClaims_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AspNetUserLogins_AspNetUsers_UserId" Association="Self.FK_AspNetUserLogins_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AspNetUserTokens_AspNetUsers_UserId" Association="Self.FK_AspNetUserTokens_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserTokens" EntitySet="AspNetUserTokens" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IpLogs_AspNetUsers_UserId" Association="Self.FK_IpLogs_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="IpLogs" EntitySet="IpLogs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CityList_DistrictList_DistrictListstrURN" Association="Self.FK_CityList_DistrictList_DistrictListstrURN">
+      <End Role="DistrictList" EntitySet="DistrictLists" />
+      <End Role="CityList" EntitySet="CityLists" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PoliceStation_CityList_CityListstrURN" Association="Self.FK_PoliceStation_CityList_CityListstrURN">
+      <End Role="CityList" EntitySet="CityLists" />
+      <End Role="PoliceStation" EntitySet="PoliceStations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProvinceList_CountryList_CountryListstrURN" Association="Self.FK_ProvinceList_CountryList_CountryListstrURN">
+      <End Role="CountryList" EntitySet="CountryLists" />
+      <End Role="ProvinceList" EntitySet="ProvinceLists" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DistrictList_ProvinceList_ProvinceListstrURN" Association="Self.FK_DistrictList_ProvinceList_ProvinceListstrURN">
+      <End Role="ProvinceList" EntitySet="ProvinceLists" />
+      <End Role="DistrictList" EntitySet="DistrictLists" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonAddress_Person_PersonstrURN" Association="Self.FK_PersonAddress_Person_PersonstrURN">
+      <End Role="Person" EntitySet="People" />
+      <End Role="PersonAddress" EntitySet="PersonAddresses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonPassportNo_Person_PersonstrURN" Association="Self.FK_PersonPassportNo_Person_PersonstrURN">
+      <End Role="Person" EntitySet="People" />
+      <End Role="PersonPassportNo" EntitySet="PersonPassportNoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SocialMedia_Person_PersonstrURN" Association="Self.FK_SocialMedia_Person_PersonstrURN">
+      <End Role="Person" EntitySet="People" />
+      <End Role="SocialMedia" EntitySet="SocialMedias" />
+    </AssociationSet>
+    <AssociationSet Name="AspNetUserRoles" Association="Self.AspNetUserRoles">
+      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(FIADATABASEModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(FIADATABASEModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+</Schema>
